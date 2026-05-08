@@ -1,0 +1,349 @@
+/* ==========================================================================
+   Garuda Mas Shipping - Custom Stylesheet
+   Theme: Dark Teal, White, Gold
+   Fonts: Outfit (Headings), Plus Jakarta Sans (Body)
+   ========================================================================== */
+
+:root {
+    /* Color Palette */
+    --primary-teal: #0A3A40;
+    --dark-teal: #20596A;
+    --light-teal: #EAF2F3;
+    --teal-muted: #1A5259;
+    --gold: #D4AF37;
+    --dark-gold: #B5952F;
+    --light-gold: #F2E8C4;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --white: #FFFFFF;
+    
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: var(--font-heading);
+}
+
+/* Utilities */
+.text-teal { color: var(--primary-teal) !important; }
+.text-gold { color: var(--gold) !important; }
+.bg-teal { background-color: var(--primary-teal) !important; }
+.bg-dark-teal { background-color: var(--dark-teal) !important; }
+.bg-light-teal { background-color: var(--light-teal) !important; }
+.bg-gold { background-color: var(--gold) !important; }
+.bg-teal-light { background-color: rgba(10, 58, 64, 0.1) !important; }
+.bg-gradient-dark { background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); }
+
+.tracking-wide { letter-spacing: 1px; }
+.tracking-wider { letter-spacing: 3px; }
+.max-w-700 { max-width: 700px; }
+
+/* Buttons */
+.btn-gold {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--white);
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--dark-gold);
+    border-color: var(--dark-gold);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    transition: all 0.4s ease;
+    background-color: transparent;
+}
+
+.navbar.navbar-scrolled {
+    background-color: rgba(32, 89, 106, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 0;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand {
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.navbar-brand .brand-text {
+    font-size: 1.2rem;
+}
+
+.navbar-brand .brand-icon {
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--gold);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('../images/hero_banner_1778153500178.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(6, 35, 38, 0.9) 0%, rgba(6, 35, 38, 0.4) 100%);
+}
+
+.hero-section .display-1 {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* About Section */
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    background-color: var(--primary-teal);
+    padding: 25px 35px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-left: 5px solid var(--gold);
+    text-align: center;
+}
+
+/* Values Section */
+.values-section {
+    background-color: #F8FBFB;
+}
+
+.line-indicator {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+.premium-value-card {
+    background-color: var(--white);
+    border: 1px solid rgba(10, 58, 64, 0.05);
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.premium-value-card:hover, .premium-value-card.active-card {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(10, 58, 64, 0.08);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.watermark-number {
+    font-size: 8rem;
+    line-height: 1;
+    right: -10px;
+    bottom: -20px;
+    font-family: var(--font-heading);
+    z-index: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.premium-value-card:hover .watermark-number, .premium-value-card.active-card .watermark-number {
+    opacity: 0.15 !important;
+    transform: scale(1.1) translateY(-10px);
+}
+
+.border-gold {
+    border-color: var(--gold) !important;
+}
+
+.card-hover-line {
+    height: 4px;
+    bottom: 0;
+    transition: width 0.4s ease;
+}
+
+.premium-value-card:hover .card-hover-line {
+    width: 100% !important;
+}
+
+.premium-value-card.active-card .card-hover-line {
+    width: 100% !important;
+}
+
+.icon-wrapper {
+    transition: all 0.4s ease;
+}
+
+.premium-value-card:hover .icon-wrapper {
+    background-color: var(--gold) !important;
+}
+
+.premium-value-card:hover .icon-wrapper i {
+    color: var(--white) !important;
+}
+
+/* Video Section */
+.video-section {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* Fleet Section */
+.border-gold-left {
+    border-left: 10px solid var(--gold);
+}
+
+.fleet-specs li {
+    font-size: 1.1rem;
+}
+
+/* Business Units */
+.unit-card {
+    height: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.unit-card img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.unit-card:hover img {
+    transform: scale(1.1);
+}
+
+.glass-overlay {
+    background: linear-gradient(to top, rgba(10, 58, 64, 0.95) 0%, rgba(10, 58, 64, 0.4) 60%, transparent 100%);
+    height: 60%;
+}
+
+.unit-card:hover .glass-overlay {
+    background: linear-gradient(to top, rgba(10, 58, 64, 0.98) 0%, rgba(10, 58, 64, 0.8) 70%, rgba(10, 58, 64, 0.4) 100%);
+    height: 80%;
+    backdrop-filter: blur(4px);
+}
+
+.unit-card:hover .unit-desc {
+    opacity: 1 !important;
+    max-height: 100px !important;
+    margin-top: 10px;
+}
+
+/* Careers */
+.career-card img {
+    transition: transform 0.6s ease;
+}
+
+.career-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Social & Activities */
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    background-color: var(--gold) !important;
+    color: var(--white) !important;
+    transform: translateY(-5px);
+}
+
+.hover-zoom {
+    transition: transform 0.4s ease;
+}
+
+.activity-img-wrapper:hover .hover-zoom {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer-links a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.hover-gold:hover {
+    color: var(--gold) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar { background-color: #20596A; padding: 12px 0; }
+    .hero-section .display-1 { font-size: 3rem; }
+    .experience-badge { bottom: -20px; right: 10px; padding: 15px 20px; }
+}
+
+.social-btn-outline:hover {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    transform: translateY(-5px);
+}
+
+.phone-mockup-container:hover img {
+    transform: rotate(0deg) scale(1.05) !important;
+}
