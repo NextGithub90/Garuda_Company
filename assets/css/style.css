@@ -5,6 +5,7 @@
    ========================================================================== */
 
 :root {
+    overflow-x: hidden;
     /* Color Palette */
     --primary-teal: #0A3A40;
     --dark-teal: #20596A;
@@ -128,6 +129,11 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(6, 35, 38, 0.9) 0%, rgba(6, 35, 38, 0.4) 100%);
+}
+
+.hero-banner-img {
+    height: 100vh;
+    object-fit: cover;
 }
 
 .hero-section .display-1 {
@@ -331,11 +337,97 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     color: var(--gold) !important;
 }
 
+/* Global Presence Glass Cards */
+.stat-glass-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.stat-glass-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.stat-glass-card:hover .stat-card-line {
+    transform: scaleX(1) !important;
+}
+
+.stat-glass-card:hover .stat-icon {
+    transform: scale(1.1);
+    opacity: 1 !important;
+}
+
+.hover-bg-gold:hover {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: var(--white) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
 /* Responsive Adjustments */
+@media (max-width: 1199.98px) {
+    .watermark-number { font-size: 6rem; }
+}
+
 @media (max-width: 991.98px) {
     .navbar { background-color: #20596A; padding: 12px 0; }
     .hero-section .display-1 { font-size: 3rem; }
+    .hero-banner-img { height: 80vh; }
     .experience-badge { bottom: -20px; right: 10px; padding: 15px 20px; }
+    .unit-card, .career-card img { height: 300px; }
+    .glass-overlay { height: 70%; }
+}
+
+@media (max-width: 767.98px) {
+    .display-4 { font-size: 2.2rem; }
+    .display-5 { font-size: 2rem; }
+    .display-6 { font-size: 1.5rem; }
+    .hero-banner-img { height: 70vh; }
+    
+    .experience-badge { 
+        position: relative; 
+        bottom: 0; 
+        right: 0; 
+        margin-top: -30px; 
+        z-index: 5; 
+        margin-left: auto; 
+        margin-right: auto; 
+        width: fit-content; 
+    }
+    
+    .fleet-section {
+        background-position: center;
+        text-align: center;
+    }
+    
+    .fleet-section .overlay.d-lg-none {
+        background: rgba(255,255,255,0.9);
+    }
+    
+    .values-section .col-lg-6.mt-4 {
+        margin-top: 1rem !important;
+    }
+    
+    .premium-value-card {
+        padding: 2rem !important;
+    }
+    
+    .connect-section .display-4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand img { height: 50px; }
+    .hero-section .display-1 { font-size: 2.2rem; }
+    .hero-banner-img { height: 60vh; }
+    .experience-badge { padding: 10px 15px; }
+    .experience-badge .fs-1 { font-size: 2rem !important; }
+    .watermark-number { font-size: 4rem; }
+    .unit-card, .career-card img { height: 250px; }
 }
 
 .social-btn-outline:hover {

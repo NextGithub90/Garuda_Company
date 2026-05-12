@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Garuda Mas Shipping</title>
+    <meta name="description"
+        content="Discover the comprehensive maritime and logistics services offered by Garuda Mas Shipping. We provide top-tier freight forwarding, port operations, offshore logistics, and more.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .service-feature-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-muted);
+        }
+        
+        .service-feature-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--gold);
+        }
+
+        .service-card-img {
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .service-img-wrapper {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .service-img-wrapper:hover .service-card-img {
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 992px) {
+            .service-block:nth-child(even) .row {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(10, 58, 64, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(10, 58, 64, 0.08);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .benefit-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background-color: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .benefit-card:hover::after {
+            width: 100%;
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-teal);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            background-color: var(--gold);
+            color: var(--white);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+            position: relative;
+        }
+        
+        .cta-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="%23D4AF37" fill-opacity="0.1"/></svg>');
+            background-size: 30px 30px;
+        }
+
+        @media (max-width: 767.98px) {
+            .service-card-img {
+                min-height: 250px;
+            }
+            .benefit-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Garuda Mas Shipping Logo" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto text-uppercase py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vision-mission.html">Vision & Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#career">Career</a></li>
+                </ul>
+                <a href="index.html#contact" class="btn btn-primary btn-gold ms-lg-4 mt-3 mt-lg-0">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header position-relative d-flex align-items-center justify-content-center"
+        style="background-image: url('assets/images/service_freight.png'); background-size: cover; background-position: center; height: 50vh; margin-top: 0;">
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+            style="background: linear-gradient(to top, rgba(10,58,64,0.95), rgba(10,58,64,0.5));"></div>
+        <!-- White bottom fade/shadow -->
+        <div class="position-absolute bottom-0 start-0 w-100" 
+            style="height: 150px; background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); z-index: 1;"></div>
+        
+        <div class="container position-relative z-3 text-center text-white mt-5">
+            <h1 class="display-4 fw-bold mb-3">Our Services</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-gold text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-2">Comprehensive Solutions</h6>
+                    <h2 class="display-5 fw-bold text-teal mb-4">Driving Global Trade Forward</h2>
+                    <p class="text-muted fs-5">At Garuda Mas Shipping, we offer a comprehensive suite of maritime and logistics services designed to meet the complex demands of global supply chains. Our tailored solutions ensure efficiency, reliability, and precision for every cargo we handle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services Sections -->
+    <section class="py-5">
+        <div class="container">
+            
+            <!-- Service 1: Sea Freight -->
+            <div class="service-block mb-5 pb-5" data-aos="fade-up">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="service-img-wrapper border-start border-gold border-5">
+                            <img src="assets/images/service_freight.png" alt="Sea Freight" class="service-card-img img-fluid">
+                            <div class="position-absolute bottom-0 end-0 bg-gold text-white p-3 rounded-start-top shadow-lg z-2">
+                                <i class="fa-solid fa-ship fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-2">01. Global Reach</h6>
+                        <h2 class="fw-bold text-teal mb-4">Sea Freight</h2>
+                        <p class="text-muted fs-5 mb-4">Our partnerships with carriers will help you to move your cargo at an optimal transportation time and cost.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>FCL & LCL Shipments</li>
+                                    <li>Global Carrier Network</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>Route Optimization</li>
+                                    <li>Cost Effective</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Customs Clearance -->
+            <div class="service-block mb-5 pb-5" data-aos="fade-up">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="service-img-wrapper border-end border-gold border-5">
+                            <img src="assets/images/service_port.png" alt="Customs Clearance" class="service-card-img img-fluid">
+                            <div class="position-absolute top-0 start-0 bg-teal text-white p-3 rounded-end-bottom shadow-lg z-2">
+                                <i class="fa-solid fa-file-signature fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-2">02. Smooth Processing</h6>
+                        <h2 class="fw-bold text-teal mb-4">Customs Clearance</h2>
+                        <p class="text-muted fs-5 mb-4">We handle customs processing for import and export clearance, declaration and certificate etc.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>Import & Export Clearance</li>
+                                    <li>Document Processing</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>Certificates Handling</li>
+                                    <li>Compliance Consultation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Project Logistic -->
+            <div class="service-block mb-5 pb-5" data-aos="fade-up">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="service-img-wrapper border-start border-gold border-5">
+                            <img src="assets/images/service_offshore.png" alt="Project Logistic" class="service-card-img img-fluid">
+                            <div class="position-absolute bottom-0 end-0 bg-gold text-white p-3 rounded-start-top shadow-lg z-2">
+                                <i class="fa-solid fa-diagram-project fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-2">03. End-To-End</h6>
+                        <h2 class="fw-bold text-teal mb-4">Project Logistic</h2>
+                        <p class="text-muted fs-5 mb-4">We provide end-to-end services to deliver all cargo associated with a client project in the correct sequence.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>Heavy Lift Operations</li>
+                                    <li>Site Management</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>Sequence Planning</li>
+                                    <li>Dedicated Supervision</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Warehousing -->
+            <div class="service-block" data-aos="fade-up">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="service-img-wrapper border-end border-gold border-5">
+                            <img src="assets/images/service_warehouse.png" alt="Warehousing" class="service-card-img img-fluid">
+                            <div class="position-absolute top-0 start-0 bg-teal text-white p-3 rounded-end-bottom shadow-lg z-2">
+                                <i class="fa-solid fa-warehouse fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-2">04. Secure Storage</h6>
+                        <h2 class="fw-bold text-teal mb-4">Warehousing</h2>
+                        <p class="text-muted fs-5 mb-4">We provide warehousing services to ease our clients with storing their goods and loading their goods into container.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>Secure Storage Facilities</li>
+                                    <li>Loading & Unloading</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled service-feature-list">
+                                    <li>Container Stuffing</li>
+                                    <li>Inventory Management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Our Services -->
+    <section class="py-5 bg-light-teal">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-2">The Garuda Mas Advantage</h6>
+                <h2 class="display-5 fw-bold text-teal">Why Choose Our Services</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon mx-auto">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h4 class="fw-bold text-teal mb-3">Global Network</h4>
+                        <p class="text-muted small mb-0">Extensive partnerships across major international ports ensuring seamless cross-border logistics.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon mx-auto">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h4 class="fw-bold text-teal mb-3">24/7 Operations</h4>
+                        <p class="text-muted small mb-0">Round-the-clock monitoring and support to address any operational needs immediately.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon mx-auto">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4 class="fw-bold text-teal mb-3">Secure & Safe</h4>
+                        <p class="text-muted small mb-0">Strict adherence to international maritime safety standards and cargo protection protocols.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon mx-auto">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4 class="fw-bold text-teal mb-3">Cost Efficient</h4>
+                        <p class="text-muted small mb-0">Optimized routing and integrated supply chain management to reduce your overall logistics costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 text-white">
+        <div class="cta-pattern"></div>
+        <div class="container position-relative z-3 py-4 text-center">
+            <h2 class="display-5 fw-bold mb-4">Ready to Optimize Your Logistics?</h2>
+            <p class="fs-5 opacity-75 mb-4 max-w-700 mx-auto">Partner with Garuda Mas Shipping today and experience a new standard of maritime excellence. Let our experts craft a tailored solution for your business.</p>
+            <a href="index.html#contact" class="btn btn-gold btn-lg rounded-pill px-5 py-3 fw-bold text-uppercase tracking-wide">
+                Get a Quote <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark-teal text-white pt-5 pb-3">
+        <div class="container pt-4">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a class="navbar-brand mb-4 d-inline-block" href="index.html">
+                        <img src="img/logo.png" alt="Garuda Mas Shipping Logo" height="70">
+                    </a>
+                    <p class="text-light opacity-75 mb-4 pe-lg-4">Delivering excellence across the world's oceans. Your
+                        trusted partner in global maritime logistics and supply chain solutions.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#" class="text-white opacity-75 hover-gold"><i
+                                class="fa-brands fa-linkedin fs-5"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-gold"><i
+                                class="fa-brands fa-instagram fs-5"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-gold"><i
+                                class="fa-brands fa-facebook fs-5"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-gold"><i
+                                class="fa-brands fa-youtube fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="index.html#home">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="index.html#values">Our Values</a></li>
+                        <li class="mb-2"><a href="index.html#career">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="services.html">Port Operations</a></li>
+                        <li class="mb-2"><a href="services.html">Offshore Logistics</a></li>
+                        <li class="mb-2"><a href="services.html">Shipyard Maintenance</a></li>
+                        <li class="mb-2"><a href="services.html">Freight Forwarding</a></li>
+                        <li class="mb-2"><a href="services.html">Warehouse Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-3 d-flex">
+                            <i class="fa-solid fa-location-dot text-gold mt-1 me-3"></i>
+                            <span class="text-light opacity-75">Jl. Pelabuhan Utama No. 88, Tanjung Priok, Jakarta
+                                14310, Indonesia</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-phone text-gold me-3"></i>
+                            <span class="text-light opacity-75">+62 21 5555 8888</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-envelope text-gold me-3"></i>
+                            <span class="text-light opacity-75">info@garudamas.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light opacity-25 my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-light opacity-75 mb-0 small">&copy; 2026 Garuda Mas Shipping. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <ul class="list-inline mb-0 small">
+                        <li class="list-inline-item me-3"><a href="#"
+                                class="text-light opacity-75 hover-gold text-decoration-none">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#"
+                                class="text-light opacity-75 hover-gold text-decoration-none">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Apply AOS attributes dynamically to elegant sections
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS
+            AOS.init({
+                offset: 120,
+                easing: 'ease-out-cubic',
+                duration: 1000,
+                once: true
+            });
+        });
+    </script>
+</body>
+
+</html>
