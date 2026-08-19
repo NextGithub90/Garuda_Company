@@ -365,9 +365,33 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .premium-value-card {
     background-color: var(--white);
     border: 1px solid rgba(10, 58, 64, 0.08);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.03);
     position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.premium-value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(10, 58, 64, 0.12) !important;
+    border-color: rgba(212, 175, 55, 0.5) !important;
+}
+
+.premium-value-card .icon-wrapper {
+    transition: all 0.35s ease;
+    background-color: transparent;
+}
+
+.premium-value-card:hover .icon-wrapper {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+.premium-value-card:hover .icon-wrapper i {
+    color: #ffffff !important;
 }
 
 .watermark-number {
@@ -379,6 +403,13 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     z-index: 0;
     pointer-events: none;
     opacity: 0.12 !important;
+    transition: all 0.4s ease;
+}
+
+.premium-value-card:hover .watermark-number {
+    opacity: 0.25 !important;
+    transform: scale(1.08) translate(-5px, -5px);
+    color: var(--gold);
 }
 
 .border-gold {
@@ -389,10 +420,13 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     height: 4px;
     bottom: 0;
     width: 100%;
+    transition: all 0.4s ease;
+    background-color: var(--gold);
 }
 
-.icon-wrapper {
-    background-color: transparent;
+.premium-value-card:hover .card-hover-line {
+    height: 6px;
+    box-shadow: 0 -2px 10px rgba(212, 175, 55, 0.5);
 }
 
 /* 5 Column Grid on Desktop */
