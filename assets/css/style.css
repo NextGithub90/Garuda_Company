@@ -172,6 +172,38 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     color: var(--gold);
 }
 
+/* Desktop view: Polos tanpa border khusus untuk Search & EN */
+@media (min-width: 992px) {
+    .nav-action-btn.search-trigger {
+        background: transparent;
+        border: none;
+        padding: 7px 12px;
+    }
+
+    .nav-action-btn.search-trigger:hover {
+        background: transparent;
+        border-color: transparent;
+        color: var(--gold);
+    }
+
+    .lang-dropdown-btn {
+        background: transparent;
+        border: none;
+        padding: 7px 12px;
+        box-shadow: none !important;
+    }
+
+    .lang-dropdown-btn:hover,
+    .lang-dropdown-btn:focus,
+    .lang-dropdown-btn.show,
+    .lang-dropdown-btn[aria-expanded="true"] {
+        background: transparent;
+        border-color: transparent;
+        color: var(--gold);
+        box-shadow: none !important;
+    }
+}
+
 .lang-dropdown-menu {
     background-color: var(--primary-teal);
     border: 1px solid rgba(212, 175, 55, 0.3);
