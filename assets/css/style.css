@@ -896,6 +896,21 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     background-color: #FFFFFF;
     box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
     outline: none;
+    z-index: 3;
+}
+
+.contact-form-card .input-group .form-select {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: 1px solid rgba(10, 58, 64, 0.15);
+    background-position: right 0.4rem center;
+    padding-right: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-form-card .input-group .form-control {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .contact-office-card {
